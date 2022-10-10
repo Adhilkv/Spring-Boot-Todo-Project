@@ -1,15 +1,16 @@
 <html>
 
-	<head>
-	
-		<title>Login</title>
-	
-	</head>
-	
-	<body>
+<head>
+
+<title>Login</title>
+
+</head>
+
+<body>
 	Please Login Below
-		
-	
-	</body>
+	<br> ${name}
+
+
+</body>
 
 </html>
