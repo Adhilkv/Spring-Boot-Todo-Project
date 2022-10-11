@@ -9,8 +9,10 @@
 <body>
 	
 	<div>
-		Hello Welcome ${name}
+		Hello Welcome  ${name}
+		<hr>
 		
+		<a href="list-todo">Click Here To Manage </a>
 		
 	</div>
 	
