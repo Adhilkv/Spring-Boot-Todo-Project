@@ -11,14 +11,12 @@ public class Todo {
 
 	private int id;
 	private String username;
-
-	private Logger logger = LoggerFactory.getLogger(getClass());
-
 	@Size(min = 10, message = "Enter Atleast 10 Char")
 	private String description;
-
 	private LocalDate targetDate;
 	private boolean done;
+	
+	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
 		super();
@@ -27,7 +25,8 @@ public class Todo {
 		this.description = description;
 		this.targetDate = targetDate;
 		this.done = done;
-		logger.debug("inside constructor Todo " + id + " :: " + username + " :: " + description + " :: " +  targetDate + " :: " +done);
+		logger.debug("inside constructor Todo " + id + " :: " + username + " :: " + description + " :: " + targetDate
+				+ " :: " + done);
 	}
 
 	public int getId() {
@@ -46,7 +45,7 @@ public class Todo {
 	}
 
 	public void setUsername(String username) {
-		logger.debug("setUsername : "  +username);
+		logger.debug("setUsername : " + username);
 		this.username = username;
 	}
 
@@ -56,7 +55,7 @@ public class Todo {
 	}
 
 	public void setDescription(String description) {
-		logger.debug("setDescription : " + description );
+		logger.debug("setDescription : " + description);
 		this.description = description;
 	}
 
