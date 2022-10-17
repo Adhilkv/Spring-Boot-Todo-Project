@@ -1,44 +1,30 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<html>
 
-<head>
+<%@ include file="common/header.jspf"%>
+<%@ include file="common/navigation.jspf"%>
 
-<title>Add Todo Page</title>
-<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
-	rel="stylesheet">
-</head>
+<div class="container">
+	<h1>Enter todo Details</h1>
+	<hr>
+	<form:form method="POST" modelAttribute="todo">
 
-<body>
-	<div class="container">
-		<h1>Enter todo Details</h1>
-		<hr>
-		<form:form method="POST" modelAttribute="todo">
-		
-			<fieldset class="mb-3">
-				<form:label path="description"> Description :</form:label>
-				<form:input type="text" path="description" required="required" />
-				<form:errors path="description" cssClass="text-warning"/>
-			</fieldset>
-			
-			<fieldset class="mb-3">
-				<form:label path="targetDate"> Description :</form:label>
-				<form:input type="text" path="targetDate" required="required" />
-				<form:errors path="targetDate" cssClass="text-warning"/>
-			</fieldset>
-			
-			<form:input type="hidden" path="id" />
-			<form:input type="hidden" path="done" />
-			
-			<input type="submit" class="btn btn-success">
-		</form:form>
+	<fieldset class="mb-3">
+		<form:label path="description"> Description :</form:label>
+		<form:input type="text" path="description" required="required" />
+		<form:errors path="description" cssClass="text-warning" />
+	</fieldset>
 
-	</div>
+	<fieldset class="mb-3">
+		<form:label path="targetDate"> Target Date :</form:label>
+		<form:input type="date" path="targetDate" required="required" />
+		<form:errors path="targetDate" cssClass="text-warning" />
+	</fieldset>
 
-	<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-	<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
+	<form:input type="hidden" path="id" />
+	<form:input type="hidden" path="done" />
 
-</body>
+	<input type="submit" class="btn btn-success">
+</form:form>
 
-</html>
+</div>
+<%@ include file="common/footer.jspf"%>
 
